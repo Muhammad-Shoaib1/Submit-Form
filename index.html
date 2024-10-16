@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="script.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Container for the form -->
+  <div class="container">
+    <!-- Form for user input -->
+    <form action="" class="form">
+      <!-- Logo icon -->
+      <i class="bi bi-send-fill" id="logo"></i>
+      <!-- Input field for full name -->
+      <div class="inner">
+        <label for="">Full Name </label>
+        <input type="text" placeholder="Enter Your Name" id="ContactName" oninput="validateName()">
+        <span id="name-error"></span>
+      </div>
+      <!-- Input field for phone number -->
+      <div class="inner">
+        <label for="">Phone No. </label>
+        <input type="text" placeholder="123 456 7890" id="PhoneNumber" oninput="validatePhone()">
+        <span id="phone-error"></span>
+      </div>
+      <!-- Input field for email address -->
+      <div class="inner">
+        <label for="">Email id </label>
+        <input type="email" placeholder="info@example.com" id="Email" oninput="validateEmail()">
+        <span id="email-error"></span>
+      </div>
+      <!-- Input field for message -->
+      <div class="inner">
+        <label for="">Your message </label>
+        <textarea placeholder="Enter Your message Here" class="message" id="Message"
+          oninput="validateMessage()"></textarea>
+        <span id="message-error"></span>
+      </div>
+      <!-- Submit button -->
+      <button type="submit" class="submit-btn" onclick="return validateSubmit()">Submit</button>
+      <!-- Error message for submission -->
+      <span id="Submit-error"></span>
+    </form>
+  </div>
+</body>
+
+</html>
